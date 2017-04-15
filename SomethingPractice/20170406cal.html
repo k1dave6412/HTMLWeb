@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Cal Test</title>
+</head>
+
+<body>
+    <p id="ans">Answer Here!</p>
+    Num1:
+    <input type="number" id="Num1" value=5></input>
+    Num2:
+    <input type="number" id="Num2" value=5></input>
+    <script>
+    function plus() {
+        document.getElementById('ans').innerHTML = parseInt(document.getElementById("Num1").value)  + parseInt(document.getElementById("Num2").value);
+    };
+
+    function sub() {
+        document.getElementById('ans').innerHTML = document.getElementById("Num1").value - document.getElementById("Num2").value;
+    };
+
+    function mutli() {
+        document.getElementById('ans').innerHTML = document.getElementById("Num1").value * document.getElementById("Num2").value;
+    };
+
+    function divide() {
+        document.getElementById('ans').innerHTML = document.getElementById("Num1").value / document.getElementById("Num2").value;
+    };
+    </script>
+    <button onclick=" plus()">Add</button>
+    <button onclick="sub()">Sub</button>
+    <button onclick="mutli()">Mutli</button>
+    <button onclick="divide()">Divide</button>
+</body>
+
+</html>
