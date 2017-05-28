@@ -1,0 +1,9 @@
+<h1>{{ restaurant.restaurant_text }}</h1>
+
+<ul>
+    {% for menu in restaurant.menu_set.all %}
+    <li>{{ menu.menu_text }} -- {{ menu.votes }} vote{{ menu.votes|pluralize }}</li>
+    {% endfor %}
+</ul>
+
+<a href="{% url 'rest:detail' restaurant.id %}">Vote again?</a>

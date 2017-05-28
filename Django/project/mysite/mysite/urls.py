@@ -17,6 +17,8 @@ from django.conf.urls import include, url
 from django.contrib import admin
 
 urlpatterns = [
-    url(r'^polls/', include('polls.urls')),
+    url(r'^', include('polls.urls')),
+    url(r'^rest/', include('rest.urls')),
     url(r'^admin/', admin.site.urls),
+    url(r'^cms/', include('cms.urls')),
 ]
