@@ -1,0 +1,87 @@
+{% extends "layout/base.html" %} 
+{% load static %} 
+{% block content %}
+<!-- Page Header -->
+<!-- Set your background image for this header on the line below. -->
+<header class="intro-header" style="background-image: url({% static 'img/about-bg.jpg' %})">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="page-heading">
+                    <h1>周邊</h1>
+                    <hr class="small">
+                    <span class="subheading">周邊商家</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Main Content -->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        
+        <h1 >{{movie.0.movie_n}}</h1>
+        <img src={{movie.0.movie_pic_loc}} style="width: 55%; height:60% ;float: left; margin-bottom: 40px; padding-right: 15px"></img>
+        <p>電影介紹：{{movie.0.movie_info}}</p>
+        <p>演員：{{movie.0.movie_actor}}</p>
+        <p>導演：{{movie.0.movie_director}}</p>
+        
+
+            {% if s1.0 and s2.0 and s3.0 %}
+            <table border=4 align=center width=100%>
+            
+                <tbody>
+                    <tr>
+                        <th>分類</th>
+                        <th>店名</th>
+                        <th>花費時間</th>
+                        <th>地址</th>
+                    </tr>
+                    {% if s1.0 %}
+                    <td align="center" rowspan={{number.0}}>路邊小吃</td>
+                    {% endif %}
+
+                    {% for s in s1 %}
+                    <tr>
+                        <td>{{s.store_name}}</td>
+                        <td>{{s.store_time}} 分鐘</td>
+                        <td>{{s.stroe_loc}}</td>
+                    </tr>
+                    {% endfor %}
+
+                    {% if s2.0 %}
+                    <td align="center" rowspan={{number.1}}>逛街搞文藝</td>
+                    {% endif %}
+
+                    {% for s in s2 %}
+                    <tr>
+                        <td>{{s.store_name}}</td>
+                        <td>{{s.store_time}} 分鐘</td>
+                        <td>{{s.stroe_loc}}</td>
+                    </tr>
+                    {% endfor %}
+                    
+                    {% if s3.0 %}
+                    <td align="center" rowspan={{number.2}}>餐廳</td>
+                    {% endif %}
+
+                    {% for s in s3 %}
+                    <tr>
+                        <td>{{s.store_name}}</td>
+                        <td>{{s.store_time}} 分鐘</td>
+                        <td>{{s.stroe_loc}}</td>
+                    </tr>
+                    {% endfor %}
+                    
+
+                </tbody>
+            </table>
+            {% else %}
+            <h2>快來不及了，快去看電影吧！</h2>
+            {% endif %}
+        </div>
+    </div>
+</div>
+<hr> {% endblock %}

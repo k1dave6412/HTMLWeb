@@ -1,0 +1,52 @@
+{% load static %}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-preview">
+
+                {% for t in theater_list %}
+                    <p>現正熱映中：</p>
+                    {% for im in t.img %}
+                        <img src={{im}} style="width: 16%; height:16% "></img>
+                    {% endfor %}
+                <table class="table">
+                    <tr>
+                        <th>影城名稱</th>
+                        <td>{{t.theater_name}}</td>
+                    </tr>
+                    <tr>
+                        <th>影城位置</th>
+                        <td>{{t.theater_loc}}</td>
+                    </tr>
+                    <tr>
+                        <th>聯絡專線</th>
+                        <td>{{t.theater_phone}}</td>
+                    </tr>
+                    <tr>
+                        <th>影城連結</th>
+                        <td>
+                            <a href={{t.theater_url}}>{{t.theater_url}}</a>
+                        </td>
+                    </tr>
+                    <tr>
+
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <td align="right">
+                            <a href="{% url 'timetable' t.theater_id t.theater_name %}">選擇  {{t.theater_name}}</a>
+                        </td>
+                    </tr>
+                </table>
+                <hr>
+                
+<!--                 <p class="post-meta">Posted by <a href="#">PIG</a> on June 12, 2017</p> -->
+
+                {% endfor %}
+
+
+            </div>
+        </div>
+    </div>
+</div>
+<hr>

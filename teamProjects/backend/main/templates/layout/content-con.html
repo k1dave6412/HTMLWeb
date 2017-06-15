@@ -1,0 +1,238 @@
+{% load static %}
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+
+
+                {% for m in movie_time %}
+                
+                
+                    <table class="hidden-xs" style="width: 100%; margin-top: 10px;">
+                        <tbody>
+                            <tr>
+                                <td colspan="7" style="border-top: 1px dashed rgb(204, 204, 204); padding-top: 10px;">
+                                    <span style="margin-right: 15px;">{{m.0}}</span>{{m.1}}
+                                </td>
+                            </tr>
+                            <tr style="padding-top: 5px;">
+
+                                {% if m.2 %}
+                                <td style="width: 14%; padding: 5px 0px; text-align: center; vertical-align: middle; left center no-repeat;">
+                                    <div>
+                                        {{m.2 }}
+                                        <button class="btn btn-warning btn-xs" style="vertical-align: bottom; margin-left: 5px;"  onclick="location.href='{% url 'abouts' id m.2 m.0 %}'">
+                                        選我
+                                        </button>
+                                    </div>
+                                </td>
+                                {% else %}
+                                 <td style="width: 14%; padding: 5px 0px; text-align: center; vertical-align: middle; background: url(&quot;../img/bg_time.gif&quot;) left center no-repeat;">
+                                    <div>
+
+                                    </div>
+                                </td>
+                                {% endif %}
+
+                                {% if m.3 %}
+                                <td style="width: 14%; padding: 5px 0px; text-align: center; vertical-align: middle; background: url(&quot;../img/bg_time.gif&quot;) left center no-repeat;">
+                                    <div>
+                                        {{m.3 }}
+                                        <button class="btn btn-warning btn-xs" style="vertical-align: bottom; margin-left: 5px;"  onclick="location.href='{% url 'abouts' id m.3 m.0 %}'">
+                                        選我
+                                        </button>
+                                    </div>
+                                </td>
+                                {% else %}
+                                 <td style="width: 14%; padding: 5px 0px; text-align: center; vertical-align: middle; background: url(&quot;../img/bg_time.gif&quot;) left center no-repeat;">
+                                    <div>
+
+                                    </div>
+                                </td>
+                                {% endif %}
+
+                                {% if m.4 %}
+                                <td style="width: 14%; padding: 5px 0px; text-align: center; vertical-align: middle; background: url(&quot;../img/bg_time.gif&quot;) left center no-repeat;">
+                                    <div>
+                                        {{m.4 }}
+                                        <button class="btn btn-warning btn-xs" style="vertical-align: bottom; margin-left: 5px;"  onclick="location.href='{% url 'abouts' id m.4 m.0 %}'">
+                                        選我
+                                        </button>
+                                    </div>
+                                </td>
+                                {% else %}
+                                 <td style="width: 14%; padding: 5px 0px; text-align: center; vertical-align: middle; background: url(&quot;../img/bg_time.gif&quot;) left center no-repeat;">
+                                    <div>
+
+                                    </div>
+                                </td>
+                                {% endif %}
+
+                                {% if m.5 %}
+                                <td style="width: 14%; padding: 5px 0px; text-align: center; vertical-align: middle; background: url(&quot;../img/bg_time.gif&quot;) left center no-repeat;">
+                                    <div>
+                                        {{m.5 }}
+                                        <button class="btn btn-warning btn-xs" style="vertical-align: bottom; margin-left: 5px;"  onclick="location.href='{% url 'abouts' id m.5 m.0 %}'">
+                                        選我
+                                        </button>
+                                    </div>
+                                </td>
+                                {% else %}
+                                 <td style="width: 14%; padding: 5px 0px; text-align: center; vertical-align: middle; background: url(&quot;../img/bg_time.gif&quot;) left center no-repeat;">
+                                    <div>
+
+                                    </div>
+                                </td>
+                                {% endif %}
+
+                                {% if m.6 %}
+                                <td style="width: 14%; padding: 5px 0px; text-align: center; vertical-align: middle; background: url(&quot;../img/bg_time.gif&quot;) left center no-repeat;">
+                                    <div>
+                                        {{m.6 }}
+                                        <button class="btn btn-warning btn-xs" style="vertical-align: bottom; margin-left: 5px;"  onclick="location.href='{% url 'abouts' id m.6 m.0 %}'">
+                                        選我
+                                        </button>
+                                    </div>
+                                </td>
+                                {% else %}
+                                 <td style="width: 14%; padding: 5px 0px; text-align: center; vertical-align: middle; background: url(&quot;../img/bg_time.gif&quot;) left center no-repeat;">
+                                    <div>
+
+                                    </div>
+                                </td>
+                                {% endif %}
+
+                                {% if m.7 %}
+                                <td style="width: 14%; padding: 5px 0px; text-align: center; vertical-align: middle; background: url(&quot;../img/bg_time.gif&quot;) left center no-repeat;">
+                                    <div>
+                                        {{m.7 }}
+                                        <button class="btn btn-warning btn-xs" style="vertical-align: bottom; margin-left: 5px;"  onclick="location.href='{% url 'abouts' id m.7 m.0 %}'">
+                                        選我
+                                        </button>
+                                    </div>
+                                </td>
+                                {% else %}
+                                <td style="width: 14%; padding: 5px 0px; text-align: center; vertical-align: middle; background: url(&quot;../img/bg_time.gif&quot;) left center no-repeat;">
+                                    <div>
+
+                                    </div>
+                                </td>
+                                {% endif %}
+
+                            </tr>
+
+                            {% if m.8 %}
+                            <tr style="padding-top: 5px;">
+                                {% if m.8 %}
+                                <td style="width: 14%; padding: 5px 0px; text-align: center; vertical-align: middle; background: url(&quot;../img/bg_time.gif&quot;) left center no-repeat;">
+                                    <div>
+                                        {{m.8 }}
+                                        <button class="btn btn-warning btn-xs" style="vertical-align: bottom; margin-left: 5px;"  onclick="location.href='{% url 'abouts' id m.8 m.0 %}'">
+                                        選我
+                                        </button>
+                                    </div>
+                                </td>
+                                {% else %}
+                                 <td style="width: 14%; padding: 5px 0px; text-align: center; vertical-align: middle; background: url(&quot;../img/bg_time.gif&quot;) left center no-repeat;">
+                                    <div>
+
+                                    </div>
+                                </td>
+                                {% endif %}
+
+                                {% if m.9 %}
+                                <td style="width: 14%; padding: 5px 0px; text-align: center; vertical-align: middle; background: url(&quot;../img/bg_time.gif&quot;) left center no-repeat;">
+                                    <div>
+                                        {{m.9 }}
+                                        <button class="btn btn-warning btn-xs" style="vertical-align: bottom; margin-left: 5px;"  onclick="location.href='{% url 'abouts' id m.9 m.0 %}'">
+                                        選我
+                                        </button>
+                                    </div>
+                                </td>
+                                {% else %}
+                                 <td style="width: 14%; padding: 5px 0px; text-align: center; vertical-align: middle; background: url(&quot;../img/bg_time.gif&quot;) left center no-repeat;">
+                                    <div>
+
+                                    </div>
+                                </td>
+                                {% endif %}
+
+                                {% if m.10 %}
+                                <td style="width: 14%; padding: 5px 0px; text-align: center; vertical-align: middle; background: url(&quot;../img/bg_time.gif&quot;) left center no-repeat;">
+                                    <div>
+                                        {{m.10 }}
+                                        <button class="btn btn-warning btn-xs" style="vertical-align: bottom; margin-left: 5px;"  onclick="location.href='{% url 'abouts' id m.10 m.0 %}'">
+                                        選我
+                                        </button>
+                                    </div>
+                                </td>
+                                {% else %}
+                                 <td style="width: 14%; padding: 5px 0px; text-align: center; vertical-align: middle; background: url(&quot;../img/bg_time.gif&quot;) left center no-repeat;">
+                                    <div>
+
+                                    </div>
+                                </td>
+                                {% endif %}
+
+                                {% if m.11 %}
+                                <td style="width: 14%; padding: 5px 0px; text-align: center; vertical-align: middle; background: url(&quot;../img/bg_time.gif&quot;) left center no-repeat;">
+                                    <div>
+                                        {{m.11 }}
+                                        <button class="btn btn-warning btn-xs" style="vertical-align: bottom; margin-left: 5px;"  onclick="location.href='{% url 'abouts' id m.11 m.0 %}'">
+                                        選我
+                                        </button>
+                                    </div>
+                                </td>
+                                {% else %}
+                                 <td style="width: 14%; padding: 5px 0px; text-align: center; vertical-align: middle; background: url(&quot;../img/bg_time.gif&quot;) left center no-repeat;">
+                                    <div>
+
+                                    </div>
+                                </td>
+                                {% endif %}
+
+                                {% if m.12 %}
+                                <td style="width: 14%; padding: 5px 0px; text-align: center; vertical-align: middle; background: url(&quot;../img/bg_time.gif&quot;) left center no-repeat;">
+                                    <div>
+                                        {{m.12 }}
+                                        <button class="btn btn-warning btn-xs" style="vertical-align: bottom; margin-left: 5px;"  onclick="location.href='{% url 'abouts' id m.12 m.0 %}'">
+                                        選我
+                                        </button>
+                                    </div>
+                                </td>
+                                {% else %}
+                                 <td style="width: 14%; padding: 5px 0px; text-align: center; vertical-align: middle; background: url(&quot;../img/bg_time.gif&quot;) left center no-repeat;">
+                                    <div>
+
+                                    </div>
+                                </td>
+                                {% endif %}
+
+                                {% if m.13 %}
+                                <td style="width: 14%; padding: 5px 0px; text-align: center; vertical-align: middle; background: url(&quot;../img/bg_time.gif&quot;) left center no-repeat;">
+                                    <div>
+                                        {{m.13 }}
+                                        <button class="btn btn-warning btn-xs" style="vertical-align: bottom; margin-left: 5px;"  onclick="location.href='{% url 'abouts' id m.13 m.0 %}'">
+                                        選我
+                                        </button>
+                                    </div>
+                                </td>
+                                {% else %}
+                                 <td style="width: 14%; padding: 5px 0px; text-align: center; vertical-align: middle; background: url(&quot;../img/bg_time.gif&quot;) left center no-repeat;">
+                                    <div>
+
+                                    </div>
+                                </td>
+                                {% endif %}
+                            </tr>
+                            {% else %}
+                            {% endif %}
+                        </tbody>
+                    </table>
+
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</article>

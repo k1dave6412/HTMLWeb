@@ -1,0 +1,26 @@
+{% extends "layout/base.html" %}
+{% load static %}
+
+{% block content %}
+
+	<header class="intro-header" style="background-image: url({% static 'img/post-bg.jpg' %})">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="page-heading">
+                        <h1>智慧時間安排</h1>
+                        <hr class="small">
+                        <h2 class="subheading">It's Show Time!!!</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <h2 align="center">{{name}}</h2>
+
+    {% include "layout/content-con.html" %}
+
+  
+
+{% endblock %}
